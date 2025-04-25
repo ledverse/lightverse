@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LightVerse - Accueil</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="boxed-wrapper">
+    <header>
+      <div class="container">
+        <h1>LightVerse</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Slider -->
+    <section class="slider">
+      <div class="slides">
+        <div class="slide"><img src="assets/images/slider1.jpg" alt="Slider 1"></div>
+        <div class="slide"><img src="assets/images/slider2.jpg" alt="Slider 2"></div>
+        <div class="slide"><img src="assets/images/slider1.jpg" alt="Slider 3"></div>
+        <div class="slide"><img src="assets/images/slider3.jpg" alt="Slider 4"></div>
+      </div>
+    </section>
+
+<section class="about-modern">
+    <h2 class="section-title">Qui sommes-nous ?</h2>
+  <div class="container">
+
+    <div class="about-grid">
+      <!-- Texte -->
+      <div class="about-info">
+        <p class="about-description">
+          Chez <strong>LightVerse</strong>, nous transformons les espaces par la lumière. Basée au Maroc, notre entreprise conçoit et installe des solutions LED innovantes, adaptées aux besoins des professionnels, collectivités et marques ambitieuses.
+        </p>
+
+        <ul class="about-list">
+          <li><i class="icon-check"></i> Expertise locale & internationale</li>
+          <li><i class="icon-check"></i> Produits LED de haute performance</li>
+          <li><i class="icon-check"></i> Accompagnement sur mesure</li>
+          <li><i class="icon-check"></i> Installation et support technique</li>
+        </ul>
+      </div>
+
+      <!-- Image -->
+      <div class="about-image-modern">
+        <img src="assets/images/about.jpg" alt="Équipe LightVerse" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Produits en défilement horizontal -->
+    <section class="produits-scroll">
+      <h2>Nos Produits</h2>
+      <div class="produits-container">
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <!-- autres produits... -->
+      </div>
+    </section>
+
+    <!-- Nous contacter -->
+    <section class="contact">
+      <h2>Nous contacter</h2>
+      <div class="contact-wrapper">
+        <form>
+          <input type="text" placeholder="Votre nom" required />
+          <input type="email" placeholder="Votre email" required />
+          <div class="radio-group">
+            <label><input type="radio" name="demande" value="info" checked /> Demande d'information</label>
+            <label><input type="radio" name="demande" value="devis" /> Demande de devis</label>
+          </div>
+          <select required>
+            <option value="">-- Choisissez un produit --</option>
+            <option value="led_exterieur">Écran LED Extérieur</option>
+            <option value="led_interieur">Écran LED Intérieur</option>
+            <option value="led_3d">Écran LED 3D Sans Lunettes</option>
+            <option value="mur_rideau">Écran Mur Rideau</option>
+            <option value="holographique">Écran Holographique 3D</option>
+          </select>
+          <textarea placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="map">
+          <iframe src="https://maps.google.com/maps?q=Casablanca,%20Maroc&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 LightVerse — Tous droits réservés.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </div>
+</body>
+</html>
