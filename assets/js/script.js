@@ -39,7 +39,7 @@ $('#contact-form').on('submit', function(e) {
 
     $.ajax({
       type: 'POST',
-      url: '/send-mail.php',
+      url: 'send-mail.php',
       data: $(this).serialize(),
       success: function(response) {
         $('#form-response').html('<p style="color:green;">' + response + '</p>');
