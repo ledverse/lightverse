@@ -1,6 +1,6 @@
 <?php
 // Adresse du destinataire
-$to = 'aaa@bb.com';
+$to = 'displayled11@gmail.com';
 
 // Données du formulaire (sécurisées)
 $raison_sociale = htmlspecialchars($_POST['raison_sociale']);
