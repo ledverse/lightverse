@@ -182,6 +182,27 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+      
+//sen mail
+$('#contact-form').on('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    $.ajax({
+      type: 'POST',
+      url: 'send-mail.php',
+      data: $(this).serialize(),
+      success: function(response) {
+        $('#form-response').html('<p style="color:green;">' + response + '</p>');
+        $('#contact-form')[0].reset(); // Réinitialiser le formulaire
+      },
+      error: function() {
+        $('#form-response').html('<p style="color:red;">Une erreur est survenue. Veuillez réessayer.</p>');
+      }
+    });
+  });
+      
+    </script>>
   </div>
 </body>
 </html>
