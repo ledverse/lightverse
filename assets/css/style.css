@@ -22,6 +22,70 @@ body {
   overflow: hidden;
 }
 
+/* TOP BAR */
+.topbar {
+  background: lightgrey;
+  color: black;
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info span {
+  margin-right: 15px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+}
+
+.social-icons img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1); /* Pour rendre les icônes claires */
+}
+
+/* VIDEO YOUTUBE */
+.section-video {
+  background-color: #aaaaaa42;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.section-video h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+
 /* HEADER */
 header {
   background-color: #111;
@@ -59,14 +123,214 @@ nav ul li a:hover {
   color: #00d0ff;
 }
 
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #222;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.has-submenu .submenu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.has-submenu .submenu li a:hover {
+  background: #444;
+}
+
+
+
+
+
+
+/* SLIDER TEST */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION - Information Produit */
+.section-produit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* optionnel */
+}
+
+.section-produit .contenu {
+  max-width: 1200px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start; /* ✅ Aligne les éléments en haut */
+
+}
+
+.section-produit .image-produit {
+  flex: 1;
+  min-width: 280px;
+}
+
+.section-produit .image-produit img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-produit .texte-produit {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ✅ Aligne le contenu en haut */
+
+
+}
+
+.section-produit .texte-produit h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.section-produit .texte-produit p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+
 /* SLIDER */
 .slider {
   overflow: hidden;
   position: relative;
   height: 500px;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0px 0px 0px 0px;
 }
 
 .slides {
@@ -94,6 +358,81 @@ nav ul li a:hover {
 
 .slide img {
   width: 100%;
+}
+
+/* SLIDER PRODUIT*/
+.slider-produit {
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.slides-produit {
+  display: flex;
+  animation: slide-produit 21s infinite; /* 3 slides × 7s = 21s */
+}
+
+@keyframes slide-produit {
+  0%     { transform: translateX(0); }
+  14.28% { transform: translateX(0); }
+
+  19.04% { transform: translateX(-100%); }
+  33.32% { transform: translateX(-100%); }
+
+  38.08% { transform: translateX(-200%); }
+  52.36% { transform: translateX(-200%); }
+
+  100%   { transform: translateX(0); }
+}
+
+.slide-produit {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-produit img {
+  width: 100%;
+}
+
+/* galerie image */
+
+
+
+.image-produit {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-principale img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.miniatures {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.miniatures img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.miniatures img:hover {
+  transform: scale(1.05);
 }
 
 /* SECTIONS GÉNÉRALES */
@@ -349,8 +688,6 @@ form {
 input, textarea, select {
   padding: 10px;
   font-size: 16px;
-  width: 100%;
-  max-width: 500px;
 }
 
 textarea {
@@ -432,3 +769,4 @@ footer {
     gap: 10px;
   }
 }
+

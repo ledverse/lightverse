@@ -5,16 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LightVerse - Accueil</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div class="boxed-wrapper">
+    <!-- Barre de contact & réseaux sociaux -->
+    <div class="topbar">
+      <div class="container">
+        <div class="contact-info">
+          <span>📞 +33 1 23 45 67 89</span>
+          <span>✉️ contact@lightverse.com</span>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="container">
         <h1>LightVerse</h1>
         <nav>
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Produits</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="has-submenu">
+              <a href="#">Produits</a>
+              <ul class="submenu">
+                <li><a href="produit-led-exterieur.html">Écran LED Extérieur</a></li>
+                <li><a href="produit-led-interieur.html">Écran LED Intérieur</a></li>
+                <li><a href="produit-led-3d.html">Écran LED 3D</a></li>
+              </ul>
+            </li>
             <li><a href="#">À propos</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -24,12 +41,29 @@
 
     <!-- Slider -->
     <section class="slider">
-      <div class="slides">
-        <div class="slide"><img src="assets/images/slider1.jpg" alt="Slider 1"></div>
-        <div class="slide"><img src="assets/images/slider2.jpg" alt="Slider 2"></div>
-        <div class="slide"><img src="assets/images/slider1.jpg" alt="Slider 3"></div>
-        <div class="slide"><img src="assets/images/slider3.jpg" alt="Slider 4"></div>
+
+      <div class="mySlides fade">
+        <img src="https://isafyi.com/wp-content/uploads/2022/06/IsaFYI-Main-Image-1200x500-1.jpg" style="width:100%">
       </div>
+
+      <div class="mySlides fade">
+        <img src="https://wearebctech.com/wp-content/uploads/2017/11/dummy-image-1200x500.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="https://isafyi.com/wp-content/uploads/2022/06/IsaFYI-Main-Image-1200x500-2.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+      <div style="text-align:center;margin-top: -30px;">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
     </section>
 
 <section class="about-modern">
@@ -58,30 +92,13 @@
     </div>
   </div>
 </section>
-<!-- slide 2 test -->
-<div class="container" id="container">
-  <div class="caption" id="slider-caption">
-    <div class="caption-heading">
-      <h1>Lorem Ipsum</h1>
-    </div>
-    <div class="caption-subhead"><span>dolor sit amet, consectetur adipiscing elit.</span></div><a class="btn" href="#">Sit Amet</a>
-  </div>
-  <div class="left-col" id="left-col">
-    <div id="left-slider"></div>
-  </div>
-  <ul class="nav">
-    <li class="slide-up"> <a href="#"><</a></li>
-    <li class="slide-down"> <a id="down_button" href="#">></a></li>
-  </ul>
-</div>
 
-<!-- end test slide 2 -->    
     <!-- Produits en défilement horizontal -->
     <section class="produits-scroll">
       <h2>Nos Produits</h2>
       <div class="produits-container">
-        <a href="produit1.html" class="produit">
-          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+        <a href="produit-led-exterieur.html" class="produit">
+          <img src="assets/images/produit2.jpg" alt="Produit 1" />
           <div class="details">
             <h3>Écran LED Extérieur</h3>
             <p>Haute luminosité, visibilité maximale en plein jour.</p>
@@ -130,14 +147,14 @@
     <section class="contact">
       <h2>Nous contacter</h2>
       <div class="contact-wrapper">
-        <form>
-          <input type="text" placeholder="Votre nom" required />
-          <input type="email" placeholder="Votre email" required />
-          <div class="radio-group">
-            <label><input type="radio" name="demande" value="info" checked /> Demande d'information</label>
-            <label><input type="radio" name="demande" value="devis" /> Demande de devis</label>
-          </div>
-          <select required>
+        <form id="contact-form">
+          <input type="text" placeholder="Raison sociale" name="raison_sociale" required />
+          <input type="email" placeholder="Votre email" name="email" required />
+
+          <label><input type="radio" name="demande" value="info" checked /> Demande d'information</label>
+          <label><input type="radio" name="demande" value="devis" /> Demande de devis</label>
+
+          <select name="produit" required>
             <option value="">-- Choisissez un produit --</option>
             <option value="led_exterieur">Écran LED Extérieur</option>
             <option value="led_interieur">Écran LED Intérieur</option>
@@ -145,9 +162,13 @@
             <option value="mur_rideau">Écran Mur Rideau</option>
             <option value="holographique">Écran Holographique 3D</option>
           </select>
-          <textarea placeholder="Votre message" required></textarea>
+
+          <textarea name="message" placeholder="Votre message" required></textarea>
           <button type="submit">Envoyer</button>
         </form>
+
+        <div id="form-response"></div>
+
 
         <div class="map">
           <iframe src="https://maps.google.com/maps?q=Casablanca,%20Maroc&t=&z=13&ie=UTF8&iwloc=&output=embed"

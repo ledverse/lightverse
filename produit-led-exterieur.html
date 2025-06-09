@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LightVerse - Page Exemple</title>
+  <link rel="stylesheet" href="assets/css/style.css"> <!-- Ton fichier CSS ici -->
+</head>
+<body>
+
+  <div class="boxed-wrapper">
+    
+<!-- Barre de contact & réseaux sociaux -->
+<div class="topbar">
+  <div class="container">
+    <div class="contact-info">
+      <span>📞 +33 1 23 45 67 89</span>
+      <span>✉️ contact@lightverse.com</span>
+    </div>
+  </div>
+</div>
+
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <h1>LightVerse</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="has-submenu">
+              <a href="#">Produits</a>
+              <ul class="submenu">
+                <li><a href="produit-led-exterieur.html">Écran LED Extérieur</a></li>
+                <li><a href="produit-led-interieur.html">Écran LED Intérieur</a></li>
+                <li><a href="produit-led-3d.html">Écran LED 3D</a></li>
+              </ul>
+            </li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+<!-- section information produit -->
+<section class="section-produit">
+  <div class="contenu">
+    
+    <div class="image-produit">
+      <div class="image-principale">
+        <img src="assets/images/about.jpg" alt="Produit LED" id="image-affichee">
+      </div>
+      <div class="miniatures">
+        <img src="assets/images/about.jpg" alt="Vue 1" class="miniature" onclick="changerImage(this)">
+        <img src="https://www.starkbros.com/images/dynamic/7350-960x960.webp" alt="Vue 2" class="miniature" onclick="changerImage(this)">
+        <img src="https://liveinnovascotia.com/sites/default/files/styles/image_text_section/public/2023-11/Landscape-fall-560x560.jpg.webp?itok=tDoCR7F9" alt="Vue 3" class="miniature" onclick="changerImage(this)">
+        <img src="assets/images/about.jpg" alt="Vue 1" class="miniature" onclick="changerImage(this)">
+      </div>
+    </div>
+
+    <div class="texte-produit">
+      <h3>Écran LED Haute Définition pour Publicité Extérieure</h3>
+      <p>
+        Découvrez notre écran LED résistant aux intempéries, parfait pour une visibilité maximale en extérieur.
+        Avec une luminosité exceptionnelle et une qualité d’image professionnelle, il capte l’attention de jour comme de nuit.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section Vidéo -->
+<section class="section-video">
+  
+    <h2>Découvrez LightVerse en Action</h2>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/MCyPogibibo?si=DwqETOlUyiTh732y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  
+</section>
+
+
+    <!-- Produits en défilement horizontal -->
+    <section class="produits-scroll">
+      <h2>Autre produits</h2>
+      <div class="produits-container">
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <a href="produit1.html" class="produit">
+          <img src="assets/images/produit1.jpg" alt="Produit 1" />
+          <div class="details">
+            <h3>Écran LED Extérieur</h3>
+            <p>Haute luminosité, visibilité maximale en plein jour.</p>
+          </div>
+        </a>
+        <!-- autres produits... -->
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 LightVerse. Tous droits réservés.</p>
+    </footer>
+
+  </div>
+<script>
+  function changerImage(element) {
+    const imageAffichee = document.getElementById("image-affichee");
+    imageAffichee.src = element.src;
+    imageAffichee.alt = element.alt;
+  }
+</script>
+</body>
+</html>
